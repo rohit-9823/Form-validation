@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: black;">
+    <div class="form1">
+    <form id="form" onsubmit="return check()"> 
+    
+        <h2>Form Validation</h2><hr>
+        <label>Enter Name:</label><br>
+        <input type="text" id="name" placeholder="Enter Name" ><br>
+        <span id="nspan">Enter Name</span><br><br>
+        <label>Enter Address:</label><br>
+        <input type="text" id="address" placeholder="Enter Address"><br>
+        <span id="aspan">Enter Address</span><br><br>
+        <label>Contact Number:</label><br>
+        <input type="number" id="contact" placeholder="Contact"><br>
+        <span id="cspan">Enter Contact</span><br><br>
+        <label>Enter Password:</label><br>
+        <input type="password" id="password" placeholder="Enter password"><br>
+        <span id="pspan">Enter Password</span><br><br>
+        <input type="submit" name="submit" value="submit" id="sub">
+    </form>
+</div>
+<script>
+function check(){
+    var regx=/^[a-zA-Z]+$/;
+    var a,b,c,d;
+    var q,w,e,r;
+    var x=document.forms["form"]["name"].value;
+    var y=document.forms["form"]["address"].value;
+    var z=document.forms["form"]["contact"].value;
+    var p=document.forms["form"]["password"].value;
+    
+        if(!x.match(regx))
+    {
+        document.getElementById('name').style.border="2px solid red"
+        document.getElementById('nspan').style.visibility="visible"
+        // return false
+        q=true;
+    }
+    else
+    {
+        document.getElementById('name').style.border="2px solid green"
+        document.getElementById('nspan').style.visibility="hidden"
+        a=true;
+    }
+
+   
+    if (!y.match(regx))
+    {
+        document.getElementById('address').style.border="2px solid red"
+        document.getElementById('aspan').style.visibility="visible"
+        // return false
+        w=true;
+    }
+    else
+    {
+        document.getElementById('address').style.border="2px solid green"
+        document.getElementById('aspan').style.visibility="hidden"
+        b=true;
+     
+    }
+   
+    if (z.match(regx))
+    {
+        document.getElementById('contact').style.border="2px solid red"
+        document.getElementById('cspan').style.visibility="visible"
+        // return false
+        e=true
+    }
+    else
+    {
+        document.getElementById('contact').style.border="2px solid green"
+        document.getElementById('cspan').style.visibility="hidden"
+        c=true;
+     
+    }
+   
+    
+      if (!p.match(regx))
+    {
+        document.getElementById('password').style.border="2px solid red"
+        document.getElementById('pspan').style.visibility="visible"
+        // return false
+        r=true;
+    }
+    else
+    {
+        document.getElementById('password').style.border="2px solid green"
+        document.getElementById('pspan').style.visibility="hidden"
+        d=true;
+    }
+    if(q==true || w==true || e==true || r==true)
+    {
+        return false
+    }
+    if(a==true && b==true && c==true && d==true)
+    {
+        document.getElementById('name').style.border="7px solid green"
+        document.getElementById('address').style.border="7px solid green"
+        document.getElementById('contact').style.border="7px solid green"
+        document.getElementById('password').style.border="7px solid green"
+        alert("form submitted")
+    }
+}
+
+    </script>
+</body>
+</html>
