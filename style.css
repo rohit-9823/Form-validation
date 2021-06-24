@@ -1,0 +1,54 @@
+.form1 {
+  background-color: white;
+  width: 25%;
+  height: 500px;
+  position: relative;
+  top: 50px;
+  left: 36%;
+  border-radius: 25px;
+}
+input {
+  width: 90%;
+  border-radius: 30px;
+  padding: 7px;
+  margin-left: 5px;
+}
+input:focus {
+  border-radius: 30px;
+  background-color: rgb(0, 255, 170);
+  transition: 0.9s;
+  outline: none;
+}
+
+input:active {
+  border-radius: 30px;
+  background-color: aqua;
+}
+label {
+  padding: 10px;
+  margin-top: 23%;
+}
+h2 {
+  text-align: center;
+}
+#sub {
+  width: 30%;
+  margin-left: 35%;
+  cursor: pointer;
+}
+#sub:hover {
+  background-color: aquamarine;
+  color: black;
+  transition: 0.5s;
+}
+#sub:focus {
+  background-color: red;
+  color: white;
+}
+span {
+  padding: 10px;
+  position: relative;
+  top: 2px;
+  margin-bottom: 35px;
+  visibility: hidden;
+}
